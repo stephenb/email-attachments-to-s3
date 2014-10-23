@@ -1,0 +1,26 @@
+{
+  "name": "Email Attachments to S3",
+  "description": "A basic app that receives Parse Incoming webhooks from Sendgrid and uploads any attachments from the email to a configured S3 bucket.",
+  "repository": "https://github.com/stephenb/email-attachments-to-s3",
+  "logo": "",
+  "keywords": ["sendgrid", "email", "attachements", "s3"],
+  "success_url": "/welcome",
+  "env": {
+    "S3_ACCESS_KEY_ID": {
+      "description": "The key for your S3 account.",
+      "required": true
+    },
+    "S3_SECRET_ACCESS_KEY": {
+      "description": "The secret for your S3 account.",
+      "required": true
+    },
+    "S3_BUCKET": {
+      "description": "The bucket in your S3 account to upload attachements to.",
+      "required": true
+    },
+    "S3_BUCKET_PATH": {
+      "description": "The path within in your bucket to upload attachements to.",
+      "value": "/"
+    }
+  },
+}
