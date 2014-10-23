@@ -1,1 +1,1 @@
-web: rackup -s puma -p 80
+web: bundle exec puma -C puma.rb
