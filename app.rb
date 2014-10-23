@@ -23,8 +23,8 @@ post '/parse' do
     puts "Processing #{num_attachments} attachments..."
     num_attachments.times do |n|
       attachment = params["attachment#{n+1}"]
-      filename = attachment.original_filename
-      data = attachment
+      filename = attachment[:filename]
+      data = attachment[:tempfile]
       AWS::S3::S3Object.store("#{ENV['S3_PATH']}#{filename}", data, ENV['S3_BUCKET'])
       puts "Uploaded attachment #{n+1}"
     end

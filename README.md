@@ -1,7 +1,7 @@
 Email Attachments to S3
 =======================
 
-This is a very simple app designed to be a turn-key Heroku deployment that will received email webooks from SendGrid's Parse Incoming API and upload all attachments from the email to a configures S3 bucket.
+This is a very simple app designed to be a turn-key Heroku deployment that will receive email webooks from SendGrid's Parse Incoming API and upload all attachments from the email to a configured S3 bucket.
 
 Prerequisites:
 --------------
