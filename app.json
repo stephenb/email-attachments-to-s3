@@ -22,5 +22,5 @@
       "description": "The path within in your bucket to upload attachements to.",
       "value": "/"
     }
-  },
+  }
 }
