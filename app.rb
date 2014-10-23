@@ -25,7 +25,9 @@ post '/parse' do
       attachment = params["attachment#{n+1}"]
       filename = attachment[:filename]
       data = attachment[:tempfile]
-      AWS::S3::S3Object.store("#{ENV['S3_BUCKET_PATH']}#{filename}", data, ENV['S3_BUCKET'])
+      upload_path = "#{ENV['S3_BUCKET_PATH']}#{filename}"
+      puts "Uploading to #{upload_path}..."
+      AWS::S3::S3Object.store(upload_path, data, ENV['S3_BUCKET'])
       puts "Uploaded attachment #{n+1}"
     end
 
