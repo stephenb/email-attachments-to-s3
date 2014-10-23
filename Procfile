@@ -1,1 +1,1 @@
-web: rackup -s puma -p 7777
+web: rackup -s puma -p 80
